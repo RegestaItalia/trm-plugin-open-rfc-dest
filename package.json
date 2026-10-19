@@ -1,0 +1,46 @@
+{
+  "name": "trm-plugin-open-rfc-dest",
+  "version": "1.0.0",
+  "description": "Experimental open-rfc connection plugin for TRM",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "cleanBuild": "rimraf dist/",
+    "build": "npm run cleanBuild && tsc --sourceMap false",
+    "prepublishOnly": "npm run build"
+  },
+  "author": {
+    "name": "Simone Gaffurini",
+    "email": "simone.gaffurini@regestaitalia.it"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "open-rfc": ">=0.2.5"
+  },
+  "peerDependencies": {
+    "trm-commons": ">=5.4.1",
+    "trm-core": ">=11.0.0"
+  },
+  "peerDependenciesMeta": {
+    "trm-commons": {
+      "optional": true
+    },
+    "trm-core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "rimraf": "^6.1.3",
+    "trm-commons": "^5.4.1",
+    "trm-core": "^11.0.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
